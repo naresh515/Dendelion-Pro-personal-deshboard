@@ -1157,7 +1157,8 @@
                         <input class="form-search" placeholder="Search UI">
                     </div>
                     <div class="notification">
-                        <i class="fa fa-light fa-bell ico"></i>
+                        <button class="btn-icon">
+                            <i class="fa fa-light fa-bell ico"></i></button>
                         <button type="button" class="noti">4</button>
                     </div>
                     <div class="right_img">
@@ -1250,6 +1251,65 @@
                 </div>
             </div>
         </div>
+        <div class="showoff">
+            <div class="content">
+                <div class="slider1">
+                    <div>
+                        <div class="image">
+                            <img src="./img/guide1.jpg" alt="">
+                        </div>
+                        <div class="image_text">
+                            <h6 class="image_head">Search Components and Pages</h6>
+                            <p class="image_para">Find any ui component or template page quicker.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="image">
+                            <img src="./img/guide2.gif" alt="">
+                        </div>
+                        <div class="image_text">
+                            <h6 class="image_head">Search Components and Pages</h6>
+                            <p class="image_para">Find any ui component or template page quicker.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="image">
+                            <img src="./img/guide3.gif" alt="">
+                        </div>
+                        <div class="image_text">
+                            <h6 class="image_head">Search Components and Pages</h6>
+                            <p class="image_para">Find any ui component or template page quicker.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="image">
+                            <img src="./img/guide4.gif" alt="">
+                        </div>
+                        <div class="image_text">
+                            <h6 class="image_head">Search Components and Pages</h6>
+                            <p class="image_para">Find any ui component or template page quicker.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="image">
+                            <img src="./img/guide5.gif" alt="">
+                        </div>
+                        <div class="image_text">
+                            <h6 class="image_head">Search Components and Pages</h6>
+                            <p class="image_para">Find any ui component or template page quicker.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-wrap">
+                    <button class="prev-btn"><i class="fa fa-light fa-angle-left"></i> Previous</button>
+                    <div class="progress1" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                        <span class="slider__label sr-only">
+                        </span>
+                    </div>
+                    <button class="next-btn">Next <i class="fa fa-light fa-angle-right"></i></button>
+                </div>
+            </div>
+        </div>
         <div class="padding_box">
             <header>
                 <div class="main_container">
@@ -1297,15 +1357,15 @@
                                 <div class="d-flex">
                                     <div class="img">
                                         <img src="./img/15.jpg">
-                                        <div class="text first">
-                                            <div class="text1">
+                                        <div class="text first" data-animation-in="fadeInUp">
+                                            <div class="text1" data-delay-in="0.3">
                                                 <button type="submit" class="but1">Newest Post</button>
                                             </div>
-                                            <div class="text2">
+                                            <div class="text2" data-delay-in="0.3">
                                                 <p class="only_text">Tortor Dapibus Fermentum</p>
                                                 <button type="submit" class="but2">See Post</button>
                                             </div>
-                                            <div class="text3">
+                                            <div class="text3" data-delay-in="0.3">
                                                 <img src="./img/53.png">
                                                 <span class="light">Posted TO
                                                     <strong>Ipsum Media</strong></span>
@@ -1318,15 +1378,15 @@
                                 <div class="d-flex">
                                     <div class="img">
                                         <img src="./img/29.jpg">
-                                        <div class="text center">
-                                            <div class="text1">
+                                        <div class="text center" data-animation-in="fadeInUp">
+                                            <div class="text1" data-delay-in="0.3">
                                                 <button type="submit" class="but1">Latest Article</button>
                                             </div>
-                                            <div class="text2">
+                                            <div class="text2" data-delay-in="0.3">
                                                 <p class="only_text">Phasellus Volutpat</p>
                                                 <button type="submit" class="but2">READ ARTICLE</button>
                                             </div>
-                                            <div class="text3">
+                                            <div class="text3" data-delay-in="0.3">
                                                 <img src="./img/58.png">
                                                 <span class="light">Posted TO
                                                     <strong>Dolor Sit News</strong></span>
@@ -1339,16 +1399,16 @@
                                 <div class="d-flex">
                                     <div class="img">
                                         <img src="./img/8.jpg">
-                                        <div class="text last">
-                                            <div class="text1">
+                                        <div class="text last" data-animation-in="fadeInUp">
+                                            <div class="text1" data-delay-in="0.3">
                                                 <button type="submit" class="but1">Just Uploaded</button>
                                             </div>
-                                            <div class="text2">
+                                            <div class="text2" data-delay-in="0.3">
                                                 <p class="only_text">Vulputate Mollis Ultricies </p>
                                                 <i class="fa fa-caret-right"></i>
                                                 <button type="submit" class="but2">Watch video</button>
                                             </div>
-                                            <div class="text3">
+                                            <div class="text3" data-delay-in="0.3">
                                                 <img src="./img/54.png">
                                                 <span class="light">Posted TO
                                                     <strong>Lorem Video</strong></span>
@@ -2129,6 +2189,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://alexandrebuffet.fr/codepen/slider/slick-animation.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script src="script.js"></script>
 </body>

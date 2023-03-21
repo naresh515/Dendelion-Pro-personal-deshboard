@@ -3,7 +3,10 @@ $('.slider_container').slick({
     arrows: true,
     slidesToScroll: 1,
     dots: false,
-})
+    autoplay: false,
+    speed: 800,
+    lazyLoad: "progressive",
+}).slickAnimation();
 
 $(document).ready(function () {
     $(".click").click(function () {
@@ -82,21 +85,27 @@ $(document).ready(function () {
     });
 
     $('.ico').click(function () {
-        $('.notification_item').slideDown(500);
+        $('.notification_item').slideToggle(500);
         $('.notification_item1').slideUp(500);
-        $("body").addClass("over");
+        $("body").toggleClass("over");
     })
 
     $('.right_img').click(function () {
-        $('.notification_item1').slideDown(500);
+        $('.notification_item1').slideToggle(500);
         $('.notification_item').slideUp(500);
-        $("body").addClass("over");
+        $("body").toggleClass("over");
     })
 
     $('.padding_box').click(function () {
         $('.notification_item').slideUp(500);
         $('.notification_item1').slideUp(500);
         $("body").removeClass("over");
+    })
+
+    $('.guide').click(function () {
+        $('.showoff').toggleClass('jayoff');
+        $("body").toggleClass("over");
+        $('.padding_box').removeClass('jayoff')
     })
 })
 
@@ -118,3 +127,33 @@ $(document).ready(function () {
         }
     })
 })
+
+
+$(document).ready(function () {
+    var $slider = $('.slider1');
+    var $progressBar = $('.progress1');
+    var $progressBarLabel = $('.slider__label');
+
+    $slider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+        var calc = ((nextSlide) / (slick.slideCount - 1)) * 100;
+
+        $progressBar
+            .css('background-size', calc + '% 100%')
+            .attr('aria-valuenow', calc);
+
+        $progressBarLabel.text(calc + '% completed');
+    });
+
+    $slider.slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        speed: 400
+    });
+    $(".prev-btn").click(function () {
+        $(".slider1").slick("slickPrev");
+    });
+
+    $(".next-btn").click(function () {
+        $(".slider1").slick("slickNext");
+    });
+});

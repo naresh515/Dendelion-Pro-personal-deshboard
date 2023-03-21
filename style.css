@@ -1205,6 +1205,7 @@ time {
 
 .na {
     text-decoration: line-through;
+    text-decoration-color: var(--dark);
 }
 
 .text_footer {
@@ -1450,6 +1451,11 @@ time {
     color: rgb(33, 150, 243);
 }
 
+.accordion_item_header:hover,
+.heading:hover {
+    color: rgb(33, 150, 243);
+}
+
 .section_text {
     height: 100%;
     position: absolute;
@@ -1519,8 +1525,7 @@ time {
     align-items: center;
     position: relative;
     width: 100%;
-    padding: 8px 0px 8px 24px;
-    margin: 8px 0px;
+    padding: 8px 0px 0px 24px;
     border-radius: 0px 24px 24px 0px;
     color: var(--vk);
 }
@@ -1690,7 +1695,6 @@ button.heading {
     font-size: 10px;
     text-transform: uppercase;
     padding: 4px 16px;
-    margin-top: 24px;
     color: rgb(0, 191, 165);
     line-height: 28px;
     font-weight: bold;
@@ -1908,10 +1912,11 @@ button.heading {
     transform: none;
     width: 350px;
     transition: opacity 350ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, transform 233ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-    top: 16px;
+    top: 50px;
     transform-origin: 350px -9.99529px;
     display: none;
     padding: 10px 0px;
+    height: 350px;
 }
 
 .notification_item1 {
@@ -1924,7 +1929,7 @@ button.heading {
     min-height: 16px;
     outline: 0px;
     transition: opacity 273ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, transform 182ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-    top: 16px;
+    top: 50px;
     right: 35px;
     display: none;
     padding: 10px 0px;
@@ -1959,11 +1964,142 @@ button.heading {
 }
 
 .hiddden {
-    display: none;
+    display: none !important;
 }
 
 .doti {
     display: none;
+}
+
+.btn_2:hover {
+    text-decoration: none;
+    background-color: rgba(0, 191, 165, 0.05);
+}
+
+.btn_1:hover {
+    text-decoration: none;
+    background-color: rgb(0, 121, 107);
+    box-shadow: rgba(80, 80, 80, 0.2) 0px 2px 4px -1px, rgba(80, 80, 80, 0.14) 0px 4px 5px 0px, rgba(80, 80, 80, 0.12) 0px 1px 10px 0px;
+}
+
+.center_first:hover {
+    background-color: rgb(224, 242, 241);
+}
+
+.first_area:hover {
+    text-decoration: none;
+    background-color: rgba(80, 80, 80, 0.05);
+}
+
+.progress1 {
+    display: block;
+    width: 350px;
+    height: 5px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #f5f5f5;
+    background-image: linear-gradient(to right, rgb(66, 165, 245), rgb(66, 165, 245));
+    background-repeat: no-repeat;
+    background-size: 0 100%;
+    transition: background-size .4s ease-in-out;
+}
+
+.showoff {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+
+.jayoff {
+    display: inline-block;
+}
+
+.content {
+    margin: auto;
+    width: 600px;
+    padding-top: 100px;
+}
+
+.slider {
+    margin: 30px auto 50px;
+}
+
+.image img {
+    display: block;
+    border-radius: 20px;
+    height: 255px;
+    width: 100%;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.btn-wrap {
+    color: rgb(255, 255, 255);
+    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    box-shadow: none;
+    display: flex;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    background: rgb(48, 48, 48);
+    padding: 8px;
+    margin: 0px auto;
+    text-align: center;
+}
+
+.prev-btn,
+.next-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 0.8125rem;
+    line-height: 1.75;
+    text-transform: uppercase;
+    min-width: 64px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    color: rgb(66, 165, 245);
+    font-weight: 500;
+    padding: 7px 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+button.slick-next.slick-arrow,
+button.slick-prev.slick-arrow {
+    display: none !important;
+}
+
+.image_text {
+    color: rgb(255, 255, 255);
+    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.16));
+    background-color: rgb(41, 41, 41);
+    position: relative;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    max-height: calc(100% - 64px);
+    max-width: 600px;
+    padding: 24px;
+}
+
+.image {
+    background-color: rgb(41, 41, 41);
 }
 
 @media screen and (min-width: 320px) and (max-width:500px) {
