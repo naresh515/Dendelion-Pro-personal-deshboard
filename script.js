@@ -30,12 +30,32 @@ $(document).ready(function () {
         $("#" + tab_id).addClass('current');
     })
 
-    $(".input_filed").click(function () {
-        if (!$(this).parent().hasClass("na")) {
+    const $tabs = $('ul.tabs1 li');
+    const $tabContents = $('.tab-content');
+    const $inputField = $(".input_filed");
+
+    $tabs.click(function () {
+        const tab_id = $(this).attr('data-tab');
+
+        $tabs.removeClass('current');
+        $tabContents.removeClass('current');
+        $(this).addClass('current');
+        $("#" + tab_id).addClass('current');
+    });
+
+    $inputField.click(function () {
+        const $parent = $(this).parent();
+
+        if (!$parent.hasClass("na")) {
             $(".center_text").removeClass("na");
+            $(this).find("input[type='checkbox']").prop('checked', true)
         }
-        $(this).parent().toggleClass("na");
-    })
+        else {
+            $(this).find("input[type='checkbox']").prop('checked', false)
+        }
+        $parent.toggleClass("na");
+    });
+
 
     var sticky = $('.nav');
     var icon = $('.left_nav_icon');
@@ -156,4 +176,52 @@ $(document).ready(function () {
     $(".next-btn").click(function () {
         $(".slider1").slick("slickNext");
     });
+});
+
+const xValues = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+const yValues = [0, 35, 70, 105, 140];
+
+new Chart("myChart", {
+    type: "bar",
+    data: {
+        labels: xValues,
+        datasets: [{
+            data: [17, 2, 0, 29, 20, 11, 3, 20, 24, 0, 29, 4],
+            backgroundColor: "#FFCCCB ",
+            fill: false
+        }, {
+            data: [124, 100, 20, 120, 117, 34, 40, 117, 20, 20, 113, 101],
+            backgroundColor: "#90EE90",
+            fill: false
+        }, {
+            data: [40, 45, 27, 50, 32, 50, 24, 32, 40, 27, 50, 79],
+            backgroundColor: "#CBC3E3",
+            fill: false
+        }, {
+            data: [20, 100, 80, 14, 86, 29, 40, 86, 100, 80, 14, 3],
+            backgroundColor: "#ADD8E6",
+            fill: false
+        },]
+    },
+    options: {
+        plugins: { legend: { display: false }, },
+        scales: {
+            xAxes: [{
+                display: true,
+                scaleLabel: {
+                    display: true,
+                    labelString: 'Month'
+                }
+            }],
+            yAxes: [{
+                display: true,
+                ticks: {
+                    beginAtZero: false,
+                    steps: 35,
+                    max: 140
+                }
+            }]
+        }
+
+    }
 });

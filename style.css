@@ -1038,14 +1038,24 @@ li.tab-link {
     background-color: var(--don);
 }
 
+#myChart {
+    width: 100%;
+    max-width: 600px
+}
+
+.graph {
+    padding-top: 24px;
+    padding-left: 35px;
+}
+
 .center_first {
     display: flex;
-    justify-content: space-between;
     padding: 10px 30px;
     cursor: pointer;
 }
 
 .input_filed {
+    width: 100%;
     display: flex;
 }
 
@@ -1491,6 +1501,10 @@ time {
 .section_text:hover .acto {
     display: flex;
     flex-direction: column;
+}
+
+.panel1:hover {
+    text-decoration: underline;
 }
 
 .section_text:hover #accordion {
@@ -2004,6 +2018,15 @@ button.heading {
     transition: background-size .4s ease-in-out;
 }
 
+.text_notification {
+    cursor: pointer;
+}
+
+.text_notification a {
+    text-decoration: none;
+    color: var(--dark);
+}
+
 .showoff {
     width: 100%;
     height: 100%;
@@ -2293,5 +2316,9 @@ button.slick-prev.slick-arrow {
 
     .toogle {
         background-color: var(--co) !important;
+    }
+
+    .graph {
+        padding-left: 0px;
     }
 }
