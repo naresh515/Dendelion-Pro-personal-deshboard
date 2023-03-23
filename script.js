@@ -144,6 +144,7 @@ $(document).ready(function () {
     $('.padding_box').click(function () {
         if (check()) {
             $('.section_text1').removeClass('visible');
+            $('.padding_box').removeClass('padding');
         }
     })
 })
