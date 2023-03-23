@@ -1794,7 +1794,7 @@ button.heading {
 }
 
 .padding {
-    padding: 0px 0px 0px 220px;
+    padding: 0px 0px 0px 220px !important;
 }
 
 .fixed .toogle {
