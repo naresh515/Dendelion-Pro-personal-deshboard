@@ -2,6 +2,7 @@ $('.slider_container').slick({
     variableWidth: true,
     arrows: true,
     slidesToScroll: 1,
+    slidesToShow: 1,
     dots: false,
     autoplay: false,
     speed: 800,
