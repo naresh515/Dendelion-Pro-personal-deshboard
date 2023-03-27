@@ -294,8 +294,9 @@ body {
     height: 267px;
     background-position: center;
     background-size: cover;
-    width: 100%;
+    width: 620px;
     background-repeat: no-repeat;
+    border-radius: 16px;
 }
 
 .img img {
@@ -445,7 +446,7 @@ body {
     display: flex !important;
     align-items: center;
     overflow: hidden;
-    width: 620px;
+    width: 100%;
     max-width: 100%;
     border-radius: 16px;
 }
@@ -1505,6 +1506,12 @@ time {
     color: rgb(33, 150, 243);
 }
 
+.accordion-item.active-menu .accordion_item_header {
+    border-left: 4px solid rgb(33, 150, 243);
+    left: 13px;
+    padding: 8px 0px 0px 7px;
+}
+
 .accordion_item_header:hover,
 .heading:hover {
     color: rgb(33, 150, 243);
@@ -2309,6 +2316,10 @@ button.slick-prev.slick-arrow {
     .doti {
         display: block;
     }
+
+    .img {
+        width: 300px;
+    }
 }
 
 @media screen and (min-width: 500px) and (max-width:900px) {
@@ -2325,6 +2336,10 @@ button.slick-prev.slick-arrow {
     .hiddden,
     .doti {
         display: none !important;
+    }
+
+    .img {
+        width: 500px;
     }
 }
 
