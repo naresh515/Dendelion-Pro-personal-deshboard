@@ -426,6 +426,10 @@ body {
     margin: 0px;
 }
 
+.img_toggle {
+    width: 535px;
+}
+
 .slick-slider {
     overflow: hidden;
 }

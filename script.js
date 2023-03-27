@@ -103,6 +103,7 @@ $(document).ready(function () {
         $('.hiden_item').toggleClass('ajax')
         $('button.heading').toggleClass('he')
         $('.toogle').toggleClass('coler')
+        $('.img').toggleClass('img_toggle')
     });
 
     $('.ico').click(function () {
