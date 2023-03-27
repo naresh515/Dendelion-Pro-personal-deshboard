@@ -9,7 +9,19 @@ $('.slider_container').slick({
     lazyLoad: "progressive",
 }).slickAnimation();
 
+
+var isWidth900 = function () {
+    return $(window).width() <= 900
+}
+
 $(document).ready(function () {
+    const $tabs = $('ul.tabs1 li');
+    const $tabContents = $('.tab-content');
+    const $inputField = $(".input_filed");
+    var $slider = $('.slider1');
+    var $progressBar = $('.progress1');
+    var $progressBarLabel = $('.slider__label');
+
     $(".click").click(function () {
         $("body").toggleClass("naresh");
     });
@@ -30,10 +42,6 @@ $(document).ready(function () {
         $(this).addClass('current');
         $("#" + tab_id).addClass('current');
     })
-
-    const $tabs = $('ul.tabs1 li');
-    const $tabContents = $('.tab-content');
-    const $inputField = $(".input_filed");
 
     $tabs.click(function () {
         const tab_id = $(this).attr('data-tab');
@@ -88,7 +96,7 @@ $(document).ready(function () {
     });
 
     $(".active2").click(function () {
-        $(this).parent(".accordion-item").find(".panel").slideToggle();
+        $(this).next(".panel").slideToggle();
         $(this).parent(".accordion-item").prevAll(".accordion-item").find(".panel").slideUp();
         $(this).parent(".accordion-item").nextAll(".accordion-item").find(".panel").slideUp();
     });
@@ -129,34 +137,6 @@ $(document).ready(function () {
         $("body").toggleClass("over");
         $('.padding_box').removeClass('jayoff')
     })
-})
-
-var check = function () {
-    return $(window).width() <= 900
-}
-
-$(document).ready(function () {
-    $('.toggle').click(function () {
-        if (check()) {
-            $('.section_text1').addClass('visible');
-            $('.toggle').toggleClass('tog')
-        }
-    });
-
-    $('.padding_box').click(function () {
-        if (check()) {
-            $('.section_text1').removeClass('visible');
-            $('.padding_box').removeClass('padding');
-        }
-    })
-})
-
-
-$(document).ready(function () {
-    var $slider = $('.slider1');
-    var $progressBar = $('.progress1');
-    var $progressBarLabel = $('.slider__label');
-
     $slider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
         var calc = ((nextSlide) / (slick.slideCount - 1)) * 100;
 
@@ -179,6 +159,19 @@ $(document).ready(function () {
     $(".next-btn").click(function () {
         $(".slider1").slick("slickNext");
     });
+    $('.toggle').click(function () {
+        if (isWidth900()) {
+            $('.section_text1').addClass('visible');
+            $('.toggle').toggleClass('tog')
+        }
+    });
+
+    $('.padding_box').click(function () {
+        if (isWidth900()) {
+            $('.section_text1').removeClass('visible');
+            $('.padding_box').removeClass('padding');
+        }
+    })
 });
 
 const xValues = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
