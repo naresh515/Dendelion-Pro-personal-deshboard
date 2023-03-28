@@ -14,7 +14,7 @@
     --co: rgb(33, 150, 243);
 }
 
-.naresh {
+.switcher {
     --dark: #ffffff;
     --background: black;
     --border: #ffffff;
@@ -1262,7 +1262,7 @@ time {
     color: var(--vk);
 }
 
-.na {
+.line-dash {
     text-decoration: line-through;
     text-decoration-color: var(--dark);
 }
@@ -1496,7 +1496,7 @@ time {
     margin: 0px;
 }
 
-.coler {
+.span_bg_color {
     background-color: var(--co) !important;
 }
 
@@ -1504,9 +1504,9 @@ time {
     transform: rotate(180deg);
 }
 
-.accordion-item.active-menu .nar1,
+.accordion-item.active-menu .strong_heading,
 .accordion-item.active-menu .heading,
-.accordion-item.active-menu .nar {
+.accordion-item.active-menu .icone_point {
     color: rgb(33, 150, 243);
 }
 
@@ -1532,7 +1532,7 @@ time {
 }
 
 .caret,
-.nar1,
+.strong_heading,
 .img_text {
     display: none;
 }
@@ -1542,7 +1542,7 @@ time {
     transition: all 0.4s ease;
 }
 
-.section_text:hover .nar1 {
+.section_text:hover .strong_heading {
     display: inline-block;
     transition: all 0.4s ease;
 }
@@ -1552,7 +1552,7 @@ time {
     padding-left: 60px;
 }
 
-.section_text:hover .acto {
+.section_text:hover .panel_display {
     display: flex;
     flex-direction: column;
 }
@@ -1855,13 +1855,13 @@ button.heading {
     background-color: red;
 }
 
-.na1 {
+.grid_display {
     margin-right: -240px;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
-.tog {
+.span-toggle {
     cursor: pointer;
     font-weight: 600;
     font-size: 0.875rem;
@@ -1879,11 +1879,11 @@ button.heading {
     align-items: center;
 }
 
-.left_aside1 {
+.width500 {
     width: 540px;
 }
 
-.ajax {
+.container_setting {
     left: 50px;
 }
 
@@ -1987,7 +1987,7 @@ button.heading {
     height: 350px;
 }
 
-.notification_item1 {
+.notification_item_left {
     box-shadow: rgba(80, 80, 80, 0.2) 0px 5px 5px -3px, rgba(80, 80, 80, 0.14) 0px 8px 10px 1px, rgba(80, 80, 80, 0.12) 0px 3px 14px 2px;
     background-color: rgb(255, 255, 255);
     border-radius: 8px;
@@ -2015,7 +2015,7 @@ button.heading {
     background-color: #e57373;
 }
 
-.over {
+.scroll-end {
     overflow: hidden;
 }
 
@@ -2090,7 +2090,7 @@ button.heading {
     display: none;
 }
 
-.jayoff {
+.display_property {
     display: inline-block;
 }
 
@@ -2435,7 +2435,7 @@ button.slick-prev.slick-arrow {
         z-index: 9998;
     }
 
-    .na1 {
+    .grid_display {
         margin-right: 0;
     }
 
