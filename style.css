@@ -105,7 +105,7 @@ body {
     align-items: center;
 }
 
-.hiden_item {
+.none {
     color: white;
     position: absolute;
     opacity: 0.7;
@@ -151,7 +151,7 @@ body {
     margin-bottom: 5.5px;
 }
 
-.toogle {
+.span_color {
     background-color: white !important;
 }
 
@@ -173,7 +173,7 @@ body {
     transition: all 0.5s ease;
 }
 
-.form-search1 {
+.form-search_after {
     padding: 10px 50px;
     transition: all 0.5s ease;
 }
@@ -1851,7 +1851,7 @@ button.heading {
     padding: 0px 0px 0px 240px !important;
 }
 
-.fixed .toogle {
+.fixed .span_color {
     background-color: red;
 }
 
@@ -1883,7 +1883,7 @@ button.heading {
     width: 540px;
 }
 
-.container_setting {
+.toggle_left {
     left: 50px;
 }
 
@@ -2081,7 +2081,7 @@ button.heading {
     color: var(--dark);
 }
 
-.showoff {
+.card_details {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
@@ -2355,7 +2355,7 @@ button.slick-prev.slick-arrow {
 
     .section_text,
     .left_nav_icon,
-    .hiden_item {
+    .none {
         display: none !important;
     }
 
@@ -2457,7 +2457,7 @@ button.slick-prev.slick-arrow {
         align-items: center
     }
 
-    .toogle {
+    .span_color {
         background-color: var(--co) !important;
     }
 

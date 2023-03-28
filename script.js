@@ -8,7 +8,7 @@ $(document).ready(function () {
     const $progressBarLabel = $('.slider__label');
     const sticky = $('.nav');
     const icon = $('.left_nav_icon');
-    const hide = $('.hiden_item');
+    const hide = $('.none');
     const span = $('.toggle span ');
     const isWidth900 = function () {
         return $(window).width() <= 900
@@ -28,16 +28,16 @@ $(document).ready(function () {
 
     //Slick Slider end
 
-    $(".click").click(function () {
+    $(".switcher_btn").click(function () {
         $("body").toggleClass("switcher");
     });
 
     $(".form-search").click(function () {
-        $(".form-search").addClass("form-search1")
+        $(".form-search").addClass("form-search_after");
     });
 
     $(".search").click(function () {
-        $(".form-search").removeClass("form-search1")
+        $(".form-search").removeClass("form-search_after");
     });
 
     //Tabs
@@ -74,7 +74,7 @@ $(document).ready(function () {
         else {
             $(this).find("input[type='checkbox']").prop('checked', false)
         }
-        $parent.toggleClass("na");
+        $parent.toggleClass("line-dash");
     });
 
     //chackbox end
@@ -86,14 +86,14 @@ $(document).ready(function () {
         if (scroll >= 1) {
             sticky.addClass('fixed');
             icon.fadeOut();
-            hide.slideDown()
-            span.addClass('toogle')
+            hide.slideDown();
+            span.addClass('span_color');
         }
         else {
             sticky.removeClass('fixed');
-            span.removeClass('toogle')
+            span.removeClass('span_color');
             icon.fadeIn();
-            hide.slideUp()
+            hide.slideUp();
         }
     });
 
@@ -112,7 +112,7 @@ $(document).ready(function () {
             $(".panel").removeClass('panel_display');
             $(".panel").slideUp();
             $(".accordion-item").removeClass("active-menu");
-            $(this).next('.panel').addClass('panel_display')
+            $(this).next('.panel').addClass('panel_display');
             $(this).next('.panel').slideDown();
             $(this).parent(".accordion-item").addClass("active-menu");
         }
@@ -122,13 +122,13 @@ $(document).ready(function () {
 
     $('.toggle').click(function () {
         $('.section_text1').toggleClass('visible');
-        $('.nav').toggleClass('grid_display')
-        $('.padding_box').toggleClass('padding')
-        $('.toggle').toggleClass('span-toggle')
-        $('.left_aside').toggleClass('width500')
-        $('.hiden_item').toggleClass('container_setting')
-        $('.toogle').toggleClass('span_bg_color')
-        $('.img').toggleClass('img_toggle')
+        $('.nav').toggleClass('grid_display');
+        $('.padding_box').toggleClass('padding');
+        $('.toggle').toggleClass('span-toggle');
+        $('.left_aside').toggleClass('width500');
+        $('.none').toggleClass('toggle_left');
+        $('.span_color').toggleClass('span_bg_color');
+        $('.img').toggleClass('img_toggle');
     });
 
     $('.ico').click(function () {
@@ -143,14 +143,8 @@ $(document).ready(function () {
         $("body").toggleClass("scroll-end");
     })
 
-    $('.padding_box').click(function () {
-        $('.notification_item').slideUp(500);
-        $('.notification_item_left').slideUp(500);
-        $("body").removeClass("scroll-end");
-    })
-
     $('.guide').click(function () {
-        $('.showoff').toggleClass('display_property');
+        $('.card_details').toggleClass('display_property');
         $("body").toggleClass("scroll-end");
     })
 
