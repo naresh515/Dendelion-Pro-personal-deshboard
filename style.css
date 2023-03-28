@@ -143,14 +143,6 @@ body {
     color: white;
 }
 
-.toggle span {
-    height: 1px;
-    width: 15px;
-    display: block;
-    background: var(--co);
-    margin-bottom: 5.5px;
-}
-
 .span_color {
     background-color: white !important;
 }
@@ -424,10 +416,6 @@ body {
     width: 700px !important;
     gap: 0;
     margin: 0px;
-}
-
-.img_toggle {
-    width: 535px;
 }
 
 .slick-slider {
@@ -1496,10 +1484,6 @@ time {
     margin: 0px;
 }
 
-.span_bg_color {
-    background-color: var(--co) !important;
-}
-
 .accordion-item.active-menu .caret {
     transform: rotate(180deg);
 }
@@ -1817,17 +1801,6 @@ button.heading {
     overflow-x: hidden;
 }
 
-.section_text1.visible {
-    left: 0px;
-    top: 0px;
-    background-color: var(--sidebar);
-    height: 100%;
-    width: 240px;
-    position: fixed;
-    z-index: 9999;
-    padding-top: 0px;
-}
-
 .section_text1.visible::-webkit-scrollbar {
     width: 10px;
 }
@@ -1847,21 +1820,36 @@ button.heading {
     display: inline;
 }
 
-.padding {
+body.opensidenav .padding_box {
     padding: 0px 0px 0px 240px !important;
 }
 
-.fixed .span_color {
-    background-color: red;
+body.opensidenav .section_text1 {
+    left: 0px;
+    top: 0px;
+    background-color: var(--sidebar);
+    height: 100%;
+    width: 240px;
+    position: fixed;
+    z-index: 9999;
+    padding-top: 0px;
 }
 
-.grid_display {
+body.opensidenav .nav {
     margin-right: -240px;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
-.span-toggle {
+body.opensidenav .span_color {
+    background-color: var(--co) !important;
+}
+
+body.opensidenav .img {
+    width: 535px;
+}
+
+body.opensidenav .toggle {
     cursor: pointer;
     font-weight: 600;
     font-size: 0.875rem;
@@ -1879,13 +1867,26 @@ button.heading {
     align-items: center;
 }
 
-.width500 {
+body.opensidenav .left_aside {
     width: 540px;
 }
 
-.toggle_left {
+body.opensidenav .none {
     left: 50px;
 }
+
+.toggle span {
+    height: 1px;
+    width: 15px;
+    display: block;
+    background: var(--co);
+    margin-bottom: 5.5px;
+}
+
+.fixed .span_color {
+    background-color: red;
+}
+
 
 .btn1 {
     height: 80px;

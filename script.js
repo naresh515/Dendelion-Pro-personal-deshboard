@@ -121,14 +121,7 @@ $(document).ready(function () {
     //Accordion End
 
     $('.toggle').click(function () {
-        $('.section_text1').toggleClass('visible');
-        $('.nav').toggleClass('grid_display');
-        $('.padding_box').toggleClass('padding');
-        $('.toggle').toggleClass('span-toggle');
-        $('.left_aside').toggleClass('width500');
-        $('.none').toggleClass('toggle_left');
-        $('.span_color').toggleClass('span_bg_color');
-        $('.img').toggleClass('img_toggle');
+        $('body').toggleClass('opensidenav');
     });
 
     $('.ico').click(function () {
