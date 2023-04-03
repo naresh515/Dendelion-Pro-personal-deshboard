@@ -172,7 +172,7 @@ $(document).ready(function () {
     $('.toggle').click(function () {
         if (isWidth900()) {
             $('.section_text1').addClass('visible');
-            $('.toggle').toggleClass('span-toggle')
+            $('.toggle').toggleClass('span-toggle');
         }
     });
 
